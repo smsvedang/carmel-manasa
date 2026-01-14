@@ -275,3 +275,14 @@ footer {
     font-weight: 600;
     text-decoration: none;
 }
+
+.list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 10px;
+    color: #444;
+}
