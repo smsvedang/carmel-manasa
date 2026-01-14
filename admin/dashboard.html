@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Admin Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Carmel Convent School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
 
-    <h1>Admin Dashboard</h1>
-    <p id="adminName"></p>
+    <div class="dashboard">
 
-    <button onclick="logout()">Logout</button>
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <button onclick="showSection('classes')">Classes</button>
+            <button onclick="showSection('teachers')">Teachers</button>
+            <button onclick="showSection('students')">Students</button>
+            <button onclick="logout()">Logout</button>
+        </aside>
+
+        <main class="content">
+
+            <!-- CLASSES -->
+            <section id="classes" class="panel">
+                <h3>Add Class</h3>
+                <input id="className" placeholder="Class (e.g. 5)">
+                <input id="sectionName" placeholder="Section (e.g. A)">
+                <button onclick="addClass()">Add</button>
+                <ul id="classList"></ul>
+            </section>
+
+            <!-- TEACHERS -->
+            <section id="teachers" class="panel hidden">
+                <h3>Add Teacher</h3>
+                <input id="tName" placeholder="Teacher Name">
+                <input id="tClass" placeholder="Class">
+                <input id="tSection" placeholder="Section">
+                <button onclick="addTeacher()">Add</button>
+                <ul id="teacherList"></ul>
+            </section>
+
+            <!-- STUDENTS -->
+            <section id="students" class="panel hidden">
+                <h3>Add Student</h3>
+                <input id="sName" placeholder="Student Name">
+                <input id="sClass" placeholder="Class">
+                <input id="sSection" placeholder="Section">
+                <input id="sRoll" placeholder="Roll No">
+                <button onclick="addStudent()">Add</button>
+                <ul id="studentList"></ul>
+            </section>
+
+        </main>
+    </div>
 
     <script src="admin.js"></script>
 </body>
