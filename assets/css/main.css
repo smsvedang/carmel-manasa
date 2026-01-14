@@ -29,3 +29,33 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #0b1c2d;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    background: #caa44d;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.panel.hidden {
+    display: none;
+}
