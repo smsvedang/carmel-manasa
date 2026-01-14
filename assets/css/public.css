@@ -1,0 +1,277 @@
+/* =========================
+   GLOBAL RESET & VARIABLES
+========================= */
+:root {
+    --primary: #0b1c2d;
+    /* Navy Blue */
+    --secondary: #caa44d;
+    /* Gold */
+    --light-bg: #f5f7fa;
+    --dark-text: #222;
+    --muted-text: #666;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: var(--white);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* =========================
+   TOP HEADER
+========================= */
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.logo {
+    height: 65px;
+}
+
+.school-title h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.school-title p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--secondary);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    margin-right: 15px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: rgba(11, 28, 45, 0.1);
+}
+
+.login-btn {
+    margin-left: auto;
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    background: linear-gradient(rgba(11, 28, 45, 0.65),
+            rgba(11, 28, 45, 0.65)),
+        url("../images/hero.jpg") center/cover no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+/* =========================
+   SECTION GENERIC
+========================= */
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section.light {
+    background: var(--light-bg);
+    border-radius: 10px;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.section p {
+    text-align: center;
+    color: var(--muted-text);
+    font-size: 16px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+    background: var(--white);
+}
+
+.card {
+    background: var(--white);
+    width: 280px;
+    margin: 15px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    color: var(--muted-text);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   INFO STRIP
+========================= */
+.info-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: var(--primary);
+    color: var(--white);
+    padding: 25px 10px;
+    font-size: 16px;
+}
+
+.info-strip div {
+    margin: 5px 10px;
+}
+
+/* =========================
+   READ MORE BUTTON
+========================= */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    background: var(--secondary);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.read-more:hover {
+    background: #b8943e;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .login-btn {
+        margin: 10px auto 0;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+}
+
+.cbse-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+.cbse-table th,
+.cbse-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.cbse-table th {
+    background: #0b1c2d;
+    color: white;
+    width: 35%;
+}
+
+.cbse-table a {
+    color: #0b1c2d;
+    font-weight: 600;
+    text-decoration: none;
+}

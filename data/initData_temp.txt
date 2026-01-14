@@ -1,0 +1,40 @@
+<script>
+    if (!localStorage.getItem("initialized")) {
+
+  const users = [
+    {
+        id: "ADMIN001",
+    role: "admin",
+    username: "admin",
+    password: "admin123"
+    },
+    {
+        id: "T001",
+    role: "teacher",
+    username: "teacher1",
+    password: "teach123",
+    class: "5",
+    section: "A"
+    },
+    {
+        id: "S001",
+    role: "student",
+    username: "student1",
+    password: "stud123",
+    class: "5",
+    section: "A",
+    roll: 12
+    },
+    {
+        id: "P001",
+    role: "parent",
+    username: "parent1",
+    password: "parent123",
+    studentId: "S001"
+    }
+    ];
+
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("initialized", "true");
+}
+</script>
